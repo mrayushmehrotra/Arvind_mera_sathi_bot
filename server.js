@@ -16,7 +16,7 @@ const bot = new TelegramBot(token, {
   },
 });
 
-const webhookUrl = `https://arvind-mera-sathi-bot.vercel.app//webhook`; // Replace with your actual domain and port
+const webhookUrl = `https://arvind-mera-sathi-bot.vercel.app/webhook`; // Replace with your actual domain and port
 bot.setWebHook(webhookUrl);
 // Replace 'chatId' with the chat ID where you want to send the image
 
