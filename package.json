@@ -1,10 +1,10 @@
 {
-  "name": "yamete_bot_telegram",
+  "name": "arvind-mera-sathi-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a Arvind Mera Sathi Bot In telegram",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch server.js"
   },
   "keywords": [],
   "author": "",

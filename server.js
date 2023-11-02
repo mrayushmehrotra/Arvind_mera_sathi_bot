@@ -1,8 +1,10 @@
 const TelegramBot = require('node-telegram-bot-api');
-
+const env = require("dotenv").config();
+const express = require("express");
+const app = express();
 
 // Replace 'YOUR_BOT_TOKEN' with your actual bot token
-const token = '6759433492:AAEy6wRuJkzfqk1hpx-cDkxhE7krX6kwHc8';
+const token = process.env.BOT_API;
 
 // Create a new Telegram bot instance
 const bot = new TelegramBot(token, { polling: true });
@@ -23,3 +25,11 @@ bot.on('message', (msg) => {
   bot.sendMessage(chatId,"https://media.tenor.com/sCxA5fbEf-oAAAAd/arvind-mera-sathi-arvind-bhaiya.gif")
 
 });
+
+app.get("/", (req,res)=>{
+  res.send(" @yamete_kadurasai_bot")
+})
+
+app.listen(8080,() =>{
+  console.log('Server is on Port 8080');
+})
