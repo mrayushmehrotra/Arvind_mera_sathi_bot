@@ -31,12 +31,16 @@ app.get("/", (req,res)=>{
   message: "@yamete_kadurasai_bot"})
 })
 
-app.listen(8080,() =>{
+app.listen(8000,() =>{
   console.log('Server is on Port 8080');
 })
 
 
 
-setTimeout(() =>{
-  
-} ,2000)
+function refreshServer(){
+  setInterval(() =>{
+      fetch("https://arvind-mera-sathi-bot.vercel.app/");
+   
+  }, 3000)
+}
+refreshServer();
