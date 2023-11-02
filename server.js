@@ -27,7 +27,8 @@ bot.on('message', (msg) => {
 });
 
 app.get("/", (req,res)=>{
-  res.send(" @yamete_kadurasai_bot")
+  res.status(200).json({success:true,
+  message: "@yamete_kadurasai_bot"})
 })
 
 app.listen(8080,() =>{
